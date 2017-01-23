@@ -1,0 +1,16 @@
+{
+    "name":"EadLine/mvc",
+    "require":{
+        "php" :  ">=5.6"
+    },
+    "authors":[{
+        "name": "Thiago Abrantes",
+        "email": "abrantes.souza@gmail.com"
+    }],
+    "autoload":{
+        "psr-4":{
+            "Eadline\\":"vendor/core",
+            "App\\":"App/"
+        }
+    }
+}
