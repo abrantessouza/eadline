@@ -1,7 +1,7 @@
 <?php 
 namespace  Eadline\Init;
-
 abstract class Bootstrap{
+
   protected $route;
 
   public function __construct(){
