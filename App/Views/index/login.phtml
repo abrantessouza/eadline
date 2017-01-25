@@ -6,10 +6,10 @@
                     <div class="tab-pane active" id="login">
                         <img class="profile-img" src="imgs/asu_501_img.png" />
 
-                        <form class="form-signin" action="" method="">
-                            <input type="text" class="form-control" placeholder="Usuário" required autofocus>
+                        <form class="form-signin" action="" ng-controller="Auth" method="">
+                            <input type="text" class="form-control"  ng-model="username" placeholder="Usuário" required autofocus>
                             <input type="password" class="form-control" placeholder="Senha" required>
-                            <input type="submit" class="btn btn-lg btn-default btn-block" value="Entrar" />
+                            <input type="submit" ng-click="actAuth()" class="btn btn-lg btn-default btn-block" value="Entrar" />
                         </form>
                         <div id="tabs" data-tabs="tabs">
                             <p class="text-center"><a href="#register" data-toggle="tab">Solicitar Registro</a></p>

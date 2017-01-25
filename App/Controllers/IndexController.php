@@ -45,7 +45,7 @@ class IndexController extends Action{
           ALGORITHM
       );
       $unencodedArray = ['jwt' => $jwt];
-      echo  "{'status' : 'success','resp':".json_encode($unencodedArray)."}";
+      echo  json_encode($unencodedArray);
   }
   
 }
