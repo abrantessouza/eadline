@@ -90,7 +90,6 @@ class CrypToken extends JWT
 
             }
             catch(\Exception $exception){
-                echo $exception->getMessage()." ".$this->getSecretKey();
                 $response['success'] = false;
             }
 
