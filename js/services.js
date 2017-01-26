@@ -23,8 +23,8 @@ app.controller("Auth",function($scope, $http, StoreBrowser){
 
     try {
         if (StoreBrowser.getData() != undefined || StoreBrowser.getData() != null) {
-            $http.get('/auth?token='+StoreBrowser.getData()).then(function (data) {
-                console.log(data);
+            $http.get('/auth?token='+StoreBrowser.getData()).then(function (response) {
+                console.log(response.data.redirect);
             });
         }
     }catch(e){
