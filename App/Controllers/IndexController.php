@@ -46,14 +46,21 @@ class IndexController extends Action{
       $users = Container::getModel("users");
       $input = $this->input();
       $pass =  HashPassword::hash($input->get('password'));
-      $res = $users->insert()
-                   ->addValues(['name','email','password','hashsalt','levelusers_id'],
-                               [$input->get('name'),
-                                $input->get('email'),
-                                $pass['hashpass'],
-                                $pass['hashsalt']
-                                  ,3])->run();
-      echo json_encode(array("output"=>$res));
+      $msg = "";
+      $res = false;
+      $checkEmailUsed = $users->select()->columns(['email'])->where("email","=",$input->get("email"))->run();
+      if(strlen($checkEmailUsed[0]['email']) > 0){
+         $msg = "E-mail existente";
+      }else{
+          $res = $users->insert()
+              ->addValues(['name','email','password','hashsalt','levelusers_id'],
+                  [$input->get('name'),
+                      $input->get('email'),
+                      $pass['hashpass'],
+                      $pass['hashsalt']
+                      ,3])->run();
+      }
+      echo json_encode(array("output"=>$res, "msg" => $msg));
   }
 
   

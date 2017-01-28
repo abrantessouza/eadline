@@ -55,7 +55,7 @@ app.controller("Auth",function($scope, $http, StoreBrowser){
                 $scope.password = "";
                 $("#loginScreen").click();
             }else{
-
+                $scope.msg = data.msg;
             }
         });
     }
