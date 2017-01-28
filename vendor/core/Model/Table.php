@@ -39,11 +39,35 @@ class Table
         return $this;
     }
 
-    public function fetch(){
-        $stm =  $this->db->prepare($this->query);
-        $stm->execute();
-        $this->result = $stm->fetch(\PDO::FETCH_ASSOC);
-        return $this->result;
+    public function insert(){
+        $this->query = "INSERT INTO {$this->table} ";
+        return $this;
     }
+
+    public function addValues(Array $cols, Array $values){
+        $strCols = join(",",$cols);
+        $strValues = "'". join("','",$values)."'";
+        $this->query .= "({$strCols}) VALUES ({$strValues})" ;
+        return $this;
+    }
+
+    public function run(){
+        try{
+            $stm =  $this->db->prepare($this->query);
+            if(strpos($this->query, 'INSERT INTO')!==false){
+                $this->result=$stm->execute();
+            }else{
+                $stm->execute();
+                $this->result = $stm->fetchAll(\PDO::FETCH_ASSOC);
+            }
+            return $this->result;
+
+        }catch(\PDOException $e){
+            return $e->getMessage();
+        }
+
+    }
+
+
 
 }

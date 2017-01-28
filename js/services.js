@@ -41,6 +41,17 @@ app.controller("Auth",function($scope, $http, StoreBrowser){
             StoreBrowser.setData(data.token);
         });
     }
+
+    $scope.actRegister = function(){
+        $http({
+            method : 'POST',
+            url    : '/register',
+            data   : { name: $scope.name, email: $scope.email},
+            headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+        }).success(function(data){
+
+        });
+    }
 });
 
 

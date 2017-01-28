@@ -21,15 +21,21 @@ class IndexController extends Action{
           $resp = $token->validationToken($_GET['token']);
           echo json_encode(array("redirect"=>$resp['success']));
       }else{
-          $content = trim(file_get_contents("php://input"));
-          $decoded = json_decode($content, true);
-          $arrUser = ["name"=>$decoded['user'],"id"=>1];
+
+          $arrUser = ["name"=>$this->input()->get('user'),"id"=>1];
           $users = Container::getModel("users");
-          $output = $users->select()->innerjoin("levelusers",array("levelusers_id","id"))->fetch();
+          $output = $users->select()->innerjoin("levelusers",array("levelusers_id","id"))->run();
           $token->setInfoUser($arrUser);
 
           echo json_encode(array("output"=>$output,"token"=>$token->genToken()));
       }
+  }
+
+  public function requestRegister(){
+      $users = Container::getModel("users");
+      $input = $this->input();
+      $res = $users->insert()->addValues(['name','email','levelusers_id'],[$input->get('name'),$input->get('email'),3])->run();
+      echo json_encode(array("output"=>$res));
   }
 
   
