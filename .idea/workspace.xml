@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1189715c-7c2c-4032-8fc0-1ad8d61932d1" name="Default" comment="Adjusting for unix environment.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/App/Controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Views/index/login.phtml" afterPath="$PROJECT_DIR$/App/Views/index/login.phtml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/stylesheet.css" afterPath="$PROJECT_DIR$/assets/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services.js" afterPath="$PROJECT_DIR$/js/services.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/core/Model/Table.php" afterPath="$PROJECT_DIR$/vendor/core/Model/Table.php" />
-    </list>
+    <list default="true" id="1189715c-7c2c-4032-8fc0-1ad8d61932d1" name="Default" comment="Adjusting for unix environment." />
     <ignored path="eadline.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -459,7 +452,7 @@
       <workItem from="1485429180572" duration="15788000" />
       <workItem from="1485565864120" duration="7454000" />
       <workItem from="1485607545328" duration="4317000" />
-      <workItem from="1485618252730" duration="10618000" />
+      <workItem from="1485618252730" duration="10772000" />
     </task>
     <task id="LOCAL-00001" summary="Adjusting for unix environment.">
       <created>1485222685076</created>
@@ -472,10 +465,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65258000" />
+    <option name="totallyTimeSpent" value="65412000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="744" extended-state="6" />
+    <frame x="-1" y="0" width="1368" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
