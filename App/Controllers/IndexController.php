@@ -26,15 +26,17 @@ class IndexController extends Action{
       }else{
           $input = $this->input();
           $users = Container::getModel("users");
-          $checkUser = $users->select()->columns(['users.name','users.password','users.hashsalt'])
+          $checkUser = $users->select()->columns(['users.id as idUser','users.name','users.password','users.hashsalt',"levelusers.typeUser as tipo"])
                           ->innerjoin("levelusers",array("levelusers_id","id"))
                           ->where("email","=",$input->get('user'))
                           ->run();
+
           if(HashPassword::validation($input->get('password'),$checkUser[0]['password'], $checkUser[0]['hashsalt'])){
-              $arrUser = ["name"=>$this->input()->get('user'),"id"=>1];
+              $arrUser = ["name"=>$checkUser[0]['name'],"id"=>$checkUser[0]['idUser'],"permission"=>$checkUser[0]['tipo']];
               $token->setInfoUser($arrUser);
               $success = true;
               $tokenGen = $token->genToken();
+              $users->update()->setColumns(['lastoken' => $tokenGen])->where("id", "=", $checkUser[0]['idUser'])->run();
           }
 
 
@@ -52,14 +54,19 @@ class IndexController extends Action{
       if(strlen($checkEmailUsed[0]['email']) > 0){
          $msg = "E-mail existente";
       }else{
-          $res = $users->insert()
-              ->addValues(['name','email','password','hashsalt','levelusers_id'],
-                  [$input->get('name'),
-                      $input->get('email'),
-                      $pass['hashpass'],
-                      $pass['hashsalt']
-                      ,3])->run();
+          if(filter_var($input->get("email"),FILTER_VALIDATE_EMAIL)){
+              $res = $users->insert()
+                  ->addValues(['name', 'email', 'password', 'hashsalt', 'levelusers_id'],
+                      [$input->get('name'),
+                          $input->get('email'),
+                          $pass['hashpass'],
+                          $pass['hashsalt']
+                          , 3])->run();
+          }else{
+              $msg = "E-mail Inválido!!";
+          }
       }
+
       echo json_encode(array("output"=>$res, "msg" => $msg));
   }
 

@@ -8,6 +8,7 @@ class Route extends Bootstrap{
     $routes['login'] = array("route"=>"/","controller"=>"indexController","action"=>"login");
     $routes['authentication'] = array("route"=>'/auth',"controller"=>"indexController","action"=>"auth");
     $routes['requestregister'] = array("route"=>'/register',"controller"=>"indexController","action"=>"requestRegister");
+    $routes['home'] = array("route"=>'/home',"controller"=>"homeController","action"=>"home");
     $this->setRoute($routes);
   }
 }

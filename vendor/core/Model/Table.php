@@ -43,7 +43,6 @@ class Table
     }
 
 
-
     public function select(){
         $this->query = "SELECT {$this->allColumns} FROM {$this->table} ";
         return $this;
@@ -53,6 +52,22 @@ class Table
         $this->query = "INSERT INTO {$this->table} ";
         return $this;
     }
+
+    public function update(){
+        $this->query = "UPDATE {$this->table} SET ";
+        return $this;
+    }
+
+    public function setColumns(array $dict){
+        $vals = implode(",", array_map(function($key, $val){
+            return sprintf("%s='%s'", $key, $val);
+        },array_keys($dict), $dict));
+        $this->query .= $vals;
+        return $this;
+    }
+
+
+
 
     public function addValues(Array $cols, Array $values){
         $strCols = join(",",$cols);
@@ -64,7 +79,7 @@ class Table
     public function run(){
         try{
             $stm =  $this->db->prepare($this->query);
-            if(strpos($this->query, 'INSERT INTO')!==false){
+            if(strpos($this->query, 'INSERT INTO')!==false || strpos($this->query, 'UPDATE')!==false  ){
                 $this->result=$stm->execute();
             }else if(strpos($this->query, 'SELECT')!==false){
                 $stm->execute();

@@ -21,6 +21,7 @@ class CrypToken extends JWT
     private $serverName; /// set your domain name
     private $name;
     private $id;
+    private $permission;
 
 
 
@@ -54,6 +55,7 @@ class CrypToken extends JWT
 
     public function setInfoUser(Array $dataUser){
         $this->name = $dataUser['name'];
+        $this->permission = $dataUser['permission'];
         $this->id = $dataUser['id'];
     }
 
