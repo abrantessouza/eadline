@@ -16,10 +16,12 @@ class Table
 
     private $query;
     private $result;
+    private $columns;
 
     public function __construct(\PDO $db)
     {
         $this->db = $db;
+        $this->allColumns = "*";
     }
 
     public function innerjoin($table, Array $on){
@@ -34,8 +36,15 @@ class Table
         return $this;
     }
 
+    public function columns(array $cols){
+        $columns = join(",",$cols);
+        $this->query = str_replace("*", "{$columns}", $this->query);
+        return $this;
+    }
+
+
     public function select(){
-        $this->query = "SELECT * FROM {$this->table} ";
+        $this->query = "SELECT {$this->allColumns} FROM {$this->table} ";
         return $this;
     }
 
@@ -56,7 +65,7 @@ class Table
             $stm =  $this->db->prepare($this->query);
             if(strpos($this->query, 'INSERT INTO')!==false){
                 $this->result=$stm->execute();
-            }else{
+            }else if(strpos($this->query, 'SELECT')!==false){
                 $stm->execute();
                 $this->result = $stm->fetchAll(\PDO::FETCH_ASSOC);
             }

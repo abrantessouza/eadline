@@ -24,7 +24,7 @@ class IndexController extends Action{
 
           $arrUser = ["name"=>$this->input()->get('user'),"id"=>1];
           $users = Container::getModel("users");
-          $output = $users->select()->innerjoin("levelusers",array("levelusers_id","id"))->run();
+          $output = $users->select()->columns(['users.id','users.name'])->innerjoin("levelusers",array("levelusers_id","id"))->run();
           $token->setInfoUser($arrUser);
 
           echo json_encode(array("output"=>$output,"token"=>$token->genToken()));
