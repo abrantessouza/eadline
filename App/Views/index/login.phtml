@@ -8,7 +8,7 @@
 
                         <form class="form-signin" action=""  method="">
                             <input type="text" class="form-control"  ng-model="username" placeholder="Usuário" required autofocus>
-                            <input type="password" class="form-control" placeholder="Senha" required>
+                            <input type="password" ng-model="passwordlogin" class="form-control" placeholder="Senha" required>
                             <input type="submit" ng-click="actAuth()" class="btn btn-lg btn-default btn-block" value="Entrar" />
                         </form>
                         <div id="tabs" data-tabs="tabs">
@@ -20,11 +20,11 @@
                         <form class="form-signin" action="" method="">
                             <input type="text" ng-model="name" class="form-control" placeholder="Nome Completo" required autofocus>
                             <input type="email"  ng-model="email" class="form-control" placeholder="Email" required>
-                            <input type="password" class="form-control" placeholder="Senha" required>
+                            <input type="password" ng-model="password" class="form-control" placeholder="Senha" required>
                             <input type="submit" ng-click="actRegister()"  class="btn btn-lg btn-default btn-block" value="Registrar" />
                         </form>
                         <div id="tabs" data-tabs="tabs">
-                            <p class="text-center"><a  href="#login" data-toggle="tab">Efetuar Login</a></p>
+                            <p class="text-center"><a  href="#login" id="loginScreen" data-toggle="tab">Efetuar Login</a></p>
                         </div>
                     </div>
 

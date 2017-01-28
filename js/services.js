@@ -35,7 +35,7 @@ app.controller("Auth",function($scope, $http, StoreBrowser){
         $http({
             method : 'POST',
             url    : '/auth',
-            data   : {user: $scope.username},
+            data   : {user: $scope.username,  password: $scope.passwordlogin},
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).success(function(data){
             StoreBrowser.setData(data.token);
@@ -46,10 +46,17 @@ app.controller("Auth",function($scope, $http, StoreBrowser){
         $http({
             method : 'POST',
             url    : '/register',
-            data   : { name: $scope.name, email: $scope.email},
+            data   : { name: $scope.name, email: $scope.email, password: $scope.password},
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).success(function(data){
+            if(data.output) {
+                $scope.name = "";
+                $scope.email = "";
+                $scope.password = "";
+                $("#loginScreen").click();
+            }else{
 
+            }
         });
     }
 });

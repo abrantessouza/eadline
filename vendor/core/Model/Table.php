@@ -32,7 +32,7 @@ class Table
     }
 
     public function where($col, $operator = "=" ,$value, $and = ""){
-        $this->query .= "WHERE {$col} {$operator} {$value} {$and}";
+        $this->query .= " WHERE {$col} {$operator} '{$value}' {$and}";
         return $this;
     }
 
@@ -41,6 +41,7 @@ class Table
         $this->query = str_replace("*", "{$columns}", $this->query);
         return $this;
     }
+
 
 
     public function select(){
