@@ -63,7 +63,8 @@ class CrypToken extends JWT
         $payload = [
             'iat'  => $this->issuedAt,         // Issued at: time when the token was generated
             'jti'  => $this->tokenId,          // Json Token Id: an unique identifier for the token
-            'iss'  => $this->serverName,     // Issuer
+            'iss'  => $this->serverName,
+            'subkey' => sha1($_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_X_FORWARDED_FOR']),// Issuer
                     // Expire
             'data' => [                  // Data related to the logged user you can set your required data
                 'id'   => $this->id, // id from the users table
@@ -86,10 +87,11 @@ class CrypToken extends JWT
         try {
             //$decoded = JWT::decode($token, $this->key, array('HS256'));
             try{
-                if(JWT::decode($token, base64_decode($this->getSecretKey()), array('HS512'))){
-                    $response = ['success'=>true];
+                if($decode = JWT::decode($token, base64_decode($this->getSecretKey()), array('HS512'))){
+                    if($decode->subkey ==  sha1($_SERVER['REMOTE_ADDR'].$_SERVER['HTTP_X_FORWARDED_FOR'])){
+                        $response = ['success'=>true];
+                    }
                 }
-
             }
             catch(\Exception $exception){
                 $response['success'] = false;

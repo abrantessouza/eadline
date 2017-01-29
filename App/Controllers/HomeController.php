@@ -16,4 +16,8 @@ class HomeController extends Action
     public function home(){
         $this->render("dash");
     }
+
+    public function trainingmanager(){
+        $this->render("training");
+    }
 }
