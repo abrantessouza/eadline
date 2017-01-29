@@ -71,13 +71,13 @@
                     <div class="modal-body" style="padding: 5px;">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
-                                <input class="form-control" name="training_name" placeholder="Nome do Treinamento" type="text" required autofocus />
+                                <input class="form-control" name="training_name" ng-model="training_name" placeholder="Nome do Treinamento" type="text" required autofocus />
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-lg-12 col-md-12 col-sm-12">
-                                <textarea style="resize:vertical;" class="form-control" placeholder="Descrição..." rows="6" name="training_description" required></textarea>
+                                <textarea style="resize:vertical;" class="form-control" ng-model="training_description" placeholder="Descrição..." rows="6" name="training_description" required></textarea>
                             </div>
                         </div>
 
@@ -96,7 +96,7 @@
                                     <div class="btn btn-default image-preview-input">
                                         <span class="glyphicon glyphicon-folder-open"></span>
                                         <span class="image-preview-input-title">Browse</span>
-                                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                                        <input type="file" ng-model="file-model" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
                                     </div>
                                 </span>
                                 </div><!-- /input-group image-preview [TO HERE]-->
