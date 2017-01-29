@@ -80,8 +80,10 @@ app.controller("Auth",function($scope, $http, StoreBrowser, $window){
             data   : {user: $scope.username,  password: $scope.passwordlogin},
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).success(function(data){
-            StoreBrowser.setData(data.token);
-            $window.location.href = "/home";
+            if(data.token.length > 30) {
+                StoreBrowser.setData(data.token);
+                $window.location.href = "/home";
+            }
         });
     }
 
