@@ -22,8 +22,33 @@ app.factory("StoreBrowser", function($window, $rootScope) {
     };
 });
 
-app.controller("Home", function($scope,$http,StoreBrowser){
 
+app.factory("Validation",function(StoreBrowser, $http){
+
+    var obj = {};
+    obj.token = function(){
+        return  $http.get('/auth?token='+StoreBrowser.getData());
+    }
+    return obj;
+});
+
+app.controller("Menu", function($scope,$http,StoreBrowser,$window){
+    if($window.location.pathname.length >1){
+        $scope.visible = true;
+    }
+});
+
+app.controller("Home",function($scope, $window, Validation, StoreBrowser){
+    $scope.visible = false;
+    Validation.token().success(function(response){
+       if(!response.redirect){
+           StoreBrowser.removeToken();
+           $window.location.href = "/";
+       }
+       else{
+           $scope.visible = true;
+       }
+    });
 });
 
 app.controller("Auth",function($scope, $http, StoreBrowser, $window){
@@ -56,6 +81,7 @@ app.controller("Auth",function($scope, $http, StoreBrowser, $window){
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).success(function(data){
             StoreBrowser.setData(data.token);
+            $window.location.href = "/home";
         });
     }
 

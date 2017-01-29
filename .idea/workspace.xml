@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1189715c-7c2c-4032-8fc0-1ad8d61932d1" name="Default" comment="Adjusting for unix environment.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Views/index/login.phtml" afterPath="$PROJECT_DIR$/App/Views/index/login.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Views/home/dash.phtml" afterPath="$PROJECT_DIR$/App/Views/home/dash.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Views/layout.phtml" afterPath="$PROJECT_DIR$/App/Views/layout.phtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services.js" afterPath="$PROJECT_DIR$/js/services.js" />
     </list>
     <ignored path="eadline.iws" />
@@ -50,8 +50,8 @@
       <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+            <state relative-caret-position="287">
+              <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -70,8 +70,18 @@
       <file leaf-file-name="dash.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state relative-caret-position="30">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Views/layout.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -117,16 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CrypToken.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/core/Controller/CrypToken.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -146,7 +146,6 @@
         <option value="$PROJECT_DIR$/vendor/core/Init/Bootstrap.php" />
         <option value="$PROJECT_DIR$/js/service.js" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/App/Views/layout.phtml" />
         <option value="$PROJECT_DIR$/App/Conn.php" />
         <option value="$PROJECT_DIR$/vendor/core/DI/Container.php" />
         <option value="$PROJECT_DIR$/App/Models/Users.php" />
@@ -158,9 +157,10 @@
         <option value="$PROJECT_DIR$/App/Controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/App/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/App/Route.php" />
-        <option value="$PROJECT_DIR$/App/Views/home/dash.phtml" />
         <option value="$PROJECT_DIR$/App/Views/index/login.phtml" />
+        <option value="$PROJECT_DIR$/App/Views/layout.phtml" />
         <option value="$PROJECT_DIR$/js/services.js" />
+        <option value="$PROJECT_DIR$/App/Views/home/dash.phtml" />
       </list>
     </option>
   </component>
@@ -534,7 +534,7 @@
       <workItem from="1485565864120" duration="7454000" />
       <workItem from="1485607545328" duration="4317000" />
       <workItem from="1485618252730" duration="20630000" />
-      <workItem from="1485650665649" duration="1148000" />
+      <workItem from="1485650665649" duration="9726000" />
     </task>
     <task id="LOCAL-00001" summary="Adjusting for unix environment.">
       <created>1485222685076</created>
@@ -547,7 +547,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76418000" />
+    <option name="totallyTimeSpent" value="84996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="744" extended-state="6" />
@@ -856,14 +856,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Views/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="67" selection-start-line="7" selection-start-column="67" selection-end-line="7" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Conn.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -883,6 +875,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -941,14 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -975,10 +960,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/Views/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/services.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+        <state relative-caret-position="287">
+          <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
           <folding />
         </state>
       </provider>
