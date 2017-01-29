@@ -13,20 +13,37 @@ app.factory("StoreBrowser", function($window, $rootScope) {
             return this;
         },
         getData: function() {
-
             return $window.localStorage && $window.localStorage.getItem('token');
+        },
+        removeToken: function(){
+            return $window.localStorage && $window.localStorage.removeItem('token');
         }
+
     };
 });
 
-app.controller("Auth",function($scope, $http, StoreBrowser){
+app.controller("Home", function($scope,$http,StoreBrowser){
 
+});
+
+app.controller("Auth",function($scope, $http, StoreBrowser, $window){
+    $scope.visible = false;
     try {
         if (StoreBrowser.getData() != undefined || StoreBrowser.getData() != null) {
             $http.get('/auth?token='+StoreBrowser.getData()).then(function (response) {
-                console.log(response.data.redirect);
+               if(response.data.redirect){
+                   $window.location.href = "/home";
+               }else{
+                   StoreBrowser.removeToken('token');
+                   $window.location.href = "/";
+                   $scope.visible = true;
+
+               }
             });
+        }else{
+            $scope.visible = true;
         }
+
     }catch(e){
         console.log(e);
     }

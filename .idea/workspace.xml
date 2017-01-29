@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1189715c-7c2c-4032-8fc0-1ad8d61932d1" name="Default" comment="Adjusting for unix environment.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Controllers/IndexController.php" afterPath="$PROJECT_DIR$/App/Controllers/IndexController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Route.php" afterPath="$PROJECT_DIR$/App/Route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/core/Controller/CrypToken.php" afterPath="$PROJECT_DIR$/vendor/core/Controller/CrypToken.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/core/Model/Table.php" afterPath="$PROJECT_DIR$/vendor/core/Model/Table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Views/index/login.phtml" afterPath="$PROJECT_DIR$/App/Views/index/login.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/services.js" afterPath="$PROJECT_DIR$/js/services.js" />
     </list>
     <ignored path="eadline.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="IndexController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Controllers/IndexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
+            <state relative-caret-position="435">
               <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding>
                 <element signature="e#35#71#0#PHP" expanded="true" />
@@ -48,21 +47,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dash.phtml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
+      <file leaf-file-name="services.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/services.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
+            <state relative-caret-position="400">
+              <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HashPassword.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/core/Controller/HashPassword.php">
+      <file leaf-file-name="login.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Views/index/login.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="45">
+              <caret line="3" column="54" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dash.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="735">
+              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -101,24 +110,9 @@
       <file leaf-file-name="Action.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/core/Controller/Action.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="465">
               <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Table.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/core/Model/Table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
-              <folding>
-                <marker date="1485633608892" expanded="true" signature="980:1012" ph="SELECT * FRO... $" />
-                <marker date="1485633608892" expanded="true" signature="1113:1125" ph="INSERT INTO $... " />
-                <marker date="1485633608892" expanded="true" signature="1113:1139" ph="INSERT INTO " />
-                <marker date="1485633608892" expanded="true" signature="1226:1251" ph="UPDATE ${{$t... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -126,7 +120,7 @@
       <file leaf-file-name="CrypToken.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vendor/core/Controller/CrypToken.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
+            <state relative-caret-position="795">
               <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
               <folding />
             </state>
@@ -159,14 +153,14 @@
         <option value="$PROJECT_DIR$/vendor/core/Controller/Action.php" />
         <option value="$PROJECT_DIR$/assets/stylesheet.css" />
         <option value="$PROJECT_DIR$/vendor/core/Controller/HashPassword.php" />
-        <option value="$PROJECT_DIR$/js/services.js" />
-        <option value="$PROJECT_DIR$/App/Views/index/login.phtml" />
         <option value="$PROJECT_DIR$/vendor/core/Model/Table.php" />
         <option value="$PROJECT_DIR$/vendor/core/Controller/CrypToken.php" />
         <option value="$PROJECT_DIR$/App/Controllers/IndexController.php" />
         <option value="$PROJECT_DIR$/App/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/App/Route.php" />
         <option value="$PROJECT_DIR$/App/Views/home/dash.phtml" />
+        <option value="$PROJECT_DIR$/App/Views/index/login.phtml" />
+        <option value="$PROJECT_DIR$/js/services.js" />
       </list>
     </option>
   </component>
@@ -210,8 +204,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -456,6 +448,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -539,7 +533,8 @@
       <workItem from="1485429180572" duration="15788000" />
       <workItem from="1485565864120" duration="7454000" />
       <workItem from="1485607545328" duration="4317000" />
-      <workItem from="1485618252730" duration="18539000" />
+      <workItem from="1485618252730" duration="20630000" />
+      <workItem from="1485650665649" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="Adjusting for unix environment.">
       <created>1485222685076</created>
@@ -552,7 +547,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73179000" />
+    <option name="totallyTimeSpent" value="76418000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="744" extended-state="6" />
@@ -881,7 +876,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,23 +883,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="23" column="50" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/services.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="57" column="38" selection-start-line="57" selection-start-column="38" selection-end-line="57" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Views/index/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -913,18 +890,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="83" column="60" selection-start-line="83" selection-start-column="60" selection-end-line="83" selection-end-column="60" />
-          <folding>
-            <marker date="1485633608892" expanded="true" signature="980:1012" ph="SELECT * FRO... $" />
-            <marker date="1485633608892" expanded="true" signature="1113:1125" ph="INSERT INTO $... " />
-            <marker date="1485633608892" expanded="true" signature="1113:1139" ph="INSERT INTO " />
-            <marker date="1485633608892" expanded="true" signature="1226:1251" ph="UPDATE ${{$t... " />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/core/Controller/HashPassword.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="570">
           <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
           <folding />
         </state>
@@ -932,7 +903,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/core/Controller/CrypToken.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
+        <state relative-caret-position="795">
           <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
           <folding />
         </state>
@@ -964,7 +935,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/core/Controller/Action.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="465">
           <caret line="31" column="43" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
           <folding />
         </state>
@@ -972,7 +943,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Views/home/dash.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
+        <state relative-caret-position="735">
           <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
           <folding />
         </state>
@@ -988,11 +959,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Controllers/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
+        <state relative-caret-position="435">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
             <element signature="e#35#71#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Views/index/login.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="54" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/services.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
+          <folding />
         </state>
       </provider>
     </entry>
