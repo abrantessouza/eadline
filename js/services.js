@@ -1,4 +1,4 @@
-var app = angular.module("eadline",[]);
+var app = angular.module("eadline",['ngFileUpload']);
 
 
 app.factory("StoreBrowser", function($window, $rootScope) {
@@ -32,39 +32,6 @@ app.factory("Validation",function(StoreBrowser, $http){
     return obj;
 });
 
-app.directive('fileModel', ['$parse', function ($parse) {
-    return {
-        restrict: 'A',
-        link: function(scope, element, attrs) {
-            var model = $parse(attrs.fileModel);
-            var modelSetter = model.assign;
-
-            element.bind('change', function(){
-                scope.$apply(function(){
-                    modelSetter(scope, element[0].files[0]);
-                });
-            });
-        }
-    };
-}]);
-
-app.service('fileUpload', ['$http', function ($http) {
-    this.uploadFileToUrl = function(file, uploadUrl){
-        var fd = new FormData();
-        fd.append('file', file);
-
-        $http.post(uploadUrl, fd, {
-            transformRequest: angular.identity,
-            headers: {'Content-Type': undefined}
-        })
-
-            .success(function(){
-            })
-
-            .error(function(){
-            });
-    }
-}]);
 
 
 app.controller("Menu", function($scope,$http,StoreBrowser,$window){
@@ -87,7 +54,15 @@ app.controller("Home",function($scope, $window, Validation, StoreBrowser){
 });
 
 
-
+app.controller("saveTrainingController", function($scope, Upload){
+    $scope.saveTraining = function(){
+        console.log($scope.form.file.$valid);
+        console.log($scope.goFile);
+        if($scope.form.file.$valid && $scope.goFile){
+            console.log($scope);
+        }
+    }
+});
 
 app.controller("Auth",function($scope, $http, StoreBrowser, $window){
     $scope.visible = false;

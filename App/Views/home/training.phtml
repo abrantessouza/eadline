@@ -60,14 +60,14 @@
     </div>
 
 
-    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
+    <div class="modal fade"  id="form" tabindex="-1" role="dialog" aria-labelledby="contactLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="panel panel-success">
                 <div class="panel-heading">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="panel-title" id="contactLabel"><span class="glyphicon glyphicon-info-sign"></span> Adicionar Treinamento</h4>
                 </div>
-                <form action="#" method="post" accept-charset="utf-8">
+                <form action="#" method="post" ng-controller="saveTrainingController" name="form" accept-charset="utf-8">
                     <div class="modal-body" style="padding: 5px;">
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6" style="padding-bottom: 10px;">
@@ -96,7 +96,7 @@
                                     <div class="btn btn-default image-preview-input">
                                         <span class="glyphicon glyphicon-folder-open"></span>
                                         <span class="image-preview-input-title">Browse</span>
-                                        <input type="file" ng-model="file-model" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                                        <input type="file" ngf-select ng-model="goFile" name="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
                                     </div>
                                 </span>
                                 </div><!-- /input-group image-preview [TO HERE]-->
@@ -106,7 +106,7 @@
 
 
                     <div class="panel-footer" style="margin-bottom:-14px;">
-                        <a class="btn btn-success" href="#">
+                        <a class="btn btn-success" ng-click="saveTraining()" href="#">
                             <i class="glyphicon glyphicon-ok"></i> Salvar</a>
 
 
