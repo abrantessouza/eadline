@@ -77,6 +77,7 @@ class Table
     }
 
     public function run(){
+        //echo $this->query;
         try{
             $stm =  $this->db->prepare($this->query);
             if(strpos($this->query, 'INSERT INTO')!==false || strpos($this->query, 'UPDATE')!==false  ){
@@ -88,7 +89,7 @@ class Table
             return $this->result;
 
         }catch(\PDOException $e){
-            return $e->getMessage();
+            echo $e->getMessage();
         }
 
     }

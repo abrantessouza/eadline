@@ -10,6 +10,8 @@ class Route extends Bootstrap{
     $routes['requestregister'] = array("route"=>'/register',"controller"=>"indexController","action"=>"requestRegister");
     $routes['home'] = array("route"=>'/home',"controller"=>"homeController","action"=>"home");
     $routes['trainingmanager'] = array("route"=>'/trainingmanager',"controller"=>"homeController","action"=>"trainingmanager");
+    $routes['savetraining'] = array("route"=>'/savetraining',"controller"=>"homeController","action"=>"savetraining");
+    $routes['loadmytrainingcourses'] = array("route"=>'/loadmytrainingcourses',"controller"=>"homeController","action"=>"loadmytrainingcourses");
     $this->setRoute($routes);
   }
 }
