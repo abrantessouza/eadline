@@ -17,3 +17,4 @@ class Users extends Table
 {
     protected $table = "users";
 }
+

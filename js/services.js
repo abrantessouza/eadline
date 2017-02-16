@@ -54,12 +54,23 @@ app.controller("Home",function($scope, $window, Validation, StoreBrowser){
 });
 
 
-app.controller("saveTrainingController", function($scope, Upload){
+app.controller("saveTrainingController", function($scope, Upload, StoreBrowser){
     $scope.saveTraining = function(){
-        console.log($scope.form.file.$valid);
-        console.log($scope.goFile);
         if($scope.form.file.$valid && $scope.goFile){
-            console.log($scope);
+            Upload.upload({
+                url:'/savetraining',
+                method: 'POST',
+                file: $scope.goFile,
+                data:{
+                    'training_name': $scope.training_name,
+                    'sumary': $scope.training_description,
+                    'token': StoreBrowser.getData()
+                }
+            }).then(function(reps){
+               if(reps.data.response){
+                   $("#form_course").modal("hide");
+               }
+            });
         }
     }
 });
