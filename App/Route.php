@@ -11,6 +11,7 @@ class Route extends Bootstrap{
     $routes['home'] = array("route"=>'/home',"controller"=>"homeController","action"=>"home");
     $routes['trainingmanager'] = array("route"=>'/trainingmanager',"controller"=>"homeController","action"=>"trainingmanager");
     $routes['savetraining'] = array("route"=>'/savetraining',"controller"=>"homeController","action"=>"savetraining");
+    $routes['loadmytrainingcourses'] = array("route"=>'/loadmytrainingcourses',"controller"=>"homeController","action"=>"loadmytrainingcourses");
     $this->setRoute($routes);
   }
 }

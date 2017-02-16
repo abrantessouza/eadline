@@ -15,12 +15,25 @@ use Eadline\DI\Container;
 
 class HomeController extends Action
 {
+
+
     public function home(){
         $this->render("dash");
     }
 
     public function trainingmanager(){
         $this->render("training");
+    }
+
+    public function loadmytrainingcourses(){
+        $token = new CrypToken($_SERVER['HTTP_HOST']);
+        $token->setSecretKey("3@dL!n3#*.*");
+        $resp = $token->validationToken($_GET['token']);
+        if($resp['success'] == true){
+            $courses = Container::getModel("courses");
+            $c = $courses->select()->where("users_id", "=",$resp['decode']->data->id)->run();
+            echo json_encode($c);
+        }
     }
 
     public function savetraining(){
@@ -52,16 +65,6 @@ class HomeController extends Action
 
         }
         echo json_encode($response) ;
-        /*
-        if(strpos($_FILES["file"]["type"],"image") !== false){
-            $course = Container::getModel("courses");
-            $input = $this->input();
-            $res = $course->insert()
-                ->addValues(['name', 'email', 'password', 'hashsalt', 'levelusers_id'],
-                    [])->run();
-        }else{
 
-        }
-        */
     }
 }

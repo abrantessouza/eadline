@@ -13,9 +13,9 @@
                             </div>
                         </div>
                         <div class="table-container">
-                            <table class="table table-filter">
+                            <table ng-controller="loadTrainingController"  class="table table-filter">
                                 <tbody ">
-                                <tr style="width: 50px;" data-status="pagado">
+                                <tr ng-repeat="mc in myCourses" style="width: 50px;" data-status="pagado">
                                     <td>
                                         <div class="ckbox">
                                             <input type="checkbox" id="checkbox1">
@@ -30,14 +30,14 @@
                                     <td>
                                         <div class="media">
                                             <a href="#" class="pull-left">
-                                                <img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+                                                <img src="../ups/{{mc.avatar_course}}" class="media-photo">
                                             </a>
                                             <div class="">
                                                 <h4 class="title">
-                                                    Lorem Impsum
+                                                    {{mc.namecourse}}
                                                     <span class="pull-right pagado"><button type="button" class="btn btn-success btn-xs btn_inr">Tópicos  </button></span>
                                                 </h4>
-                                                <p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+                                                <p class="summary">{{mc.sumary}}</p>
                                             </div>
                                         </div>
                                     </td>

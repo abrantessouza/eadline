@@ -75,6 +75,14 @@ app.controller("saveTrainingController", function($scope, Upload, StoreBrowser){
     }
 });
 
+app.controller("loadTrainingController", function($scope, $http, StoreBrowser){
+    $http.get('/loadmytrainingcourses?token='+StoreBrowser.getData()).then(function (response) {
+
+         $scope.myCourses = response.data;
+
+    })
+});
+
 app.controller("Auth",function($scope, $http, StoreBrowser, $window){
     $scope.visible = false;
     try {
@@ -130,10 +138,4 @@ app.controller("Auth",function($scope, $http, StoreBrowser, $window){
     }
 });
 
-app.controller('managerCourse', ['$scope', 'fileUpload', function($scope, fileUpload){
-    $scope.uploadFile = function(){
-        var file = $scope.myFile;
-        var uploadUrl = "/savedata";
-        fileUpload.uploadFileToUrl(file, uploadUrl);
-    };
-}]);
+
